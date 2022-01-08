@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+</head>
+<body>
+    <h1 class="hola"> Formulario Información Alta Telefónica</h1>
+        <form>
+        <fieldset class="personalInfo"> 
+            <legend class="legend1">Datos personales</legend> 
+            Nombre:<input class="ph_pInfo" type="text" name="nombre"
+            maxlength="30"> </br>
+            Apellidos:<input class="ph_pInfo" type="text" name="apellidos"
+            maxlength="60" /></br>
+            Dirección:<input class="ph_pInfo" type="text" name="direccion"
+            maxlength="60" /></br>
+            Código Postal: <input class="ph_pInfo" type="text" name="cp"
+            maxlength="5" /></br>
+            Localidad:<input class="ph_pInfo" type="text" name="localidad"
+            maxlength="30" /></br>
+            Provincia:<input class="ph_pInfo" type="text" name="provincia"
+            maxlength="30" /></br>
+        </fieldset>
+
+        <fieldset class="contract"> 
+            <legend class="legend2">Tipo de contratación</legend>
+            <input type="radio" name="contrato" value="nuevo" checked="checked"> Nueva contratación </input>
+            <input type="radio" name="contrato" value="nuevo"> Portabilidad </input>
+            <input type="radio" name="contrato" value="nuevo"> Cambio de contrato </input> 
+            <p>Elija la compañía actual:</p>
+            <select name="origen">
+                <option value="movistar">Movistar</option>
+                <option value="orange">Orange</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="yoigo">Yoigo</option>
+                <option value="ninguna">No tengo ninguna compañía</option>
+            </select>
+            <p>En caso de portabilidad, elija la nueva compañía:</p>
+            <select name="origen">
+                <option value="movistar">Movistar</option>
+                <option value="orange">Orange</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="yoigo">Yoigo</option>
+            </select>
+        </fieldset>
+
+
+        <fieldset class="payInfo"> 
+            <legend class="legend3">Datos bancarios</legend>
+            País:<input class="ph_dbanco" type="text" name="pais" value="ES"
+            readonly="readonly"/> </br>
+            Control IBAN:<input class="ph_dbanco"  type="text" name="controlIBAN" placeholder="XX" pattern="[0-9]{2}" 
+            maxlength="2" /></br>
+            Entidad:<input class="ph_dbanco"  type="text" name="entidad" placeholder="XXXX" pattern="[0-9]{4}" 
+            maxlength="4" /></br>
+            Sucursal: <input class="ph_dbanco"  type="text" name="sucursal" placeholder="XX" pattern="[0-9]{2}"maxlength="2"/></br>
+            DC:<input class="ph_dbanco"  type="text" name="dc" placeholder="XX" pattern="[0-9]{2}" 
+            maxlength="2" /></br>
+            Cuenta:<input class="ph_dbanco js-cuenta" value="" type="text" name="cuenta" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" 
+            maxlength="10" /></br>
+
+        </fieldset>
+        <fieldset class="masInfo"> 
+            <legend class="legend4">Datos estadíticos - ¿Cómo nos conoció?</legend>
+            <input type="checkbox" name="contrato" value="nuevo"> A través de la TV</input><br>
+            <input type="checkbox" name="contrato" value="nuevo"> A través de la radio</input><br>
+            <input type="checkbox" name="contrato" value="nuevo"> A través de la Internet</input><br>
+            <input type="checkbox" name="contrato" value="nuevo"> Otros</input> <br>
+            <input type="range"  name="barra" min="1" max="5" step="1" value=""><br>
+            Fecha de la encuesta <input type="date" name="fecha" value=""> </input><br>
+        </fieldset>  
+        <button class="js-submit" type="submit" class="send">Enviar datos</button> 
+        <button class="js-borrar" type="reset" class="clean">Borrar datos</button> <br>
+        <button class="js-valor" onclick="alert(barra.value)">Mostrar Valoración</button>
+        <button class="js-cuenta" onclick="alert(cuenta.value)" >Mostrar Cuenta</button>
+        <button class="js-dia" onclick="alert(fecha.value)">Mostrar día de la semana</button>
+    
+    </form>
+    <script type="text/javascript" src="/main.js"></script>
+</body>
+</html>
+
