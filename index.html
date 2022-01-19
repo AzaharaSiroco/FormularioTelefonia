@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    
+    <title>Azahara García - Samsung DesArrolladoras Lab</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css"
+
 </head>
 <body>
     <h1 class="hola"> Formulario Información Alta Telefónica</h1>
@@ -71,17 +72,24 @@
             <input type="checkbox" name="contrato" value="nuevo"> A través de la radio</input><br>
             <input type="checkbox" name="contrato" value="nuevo"> A través de la Internet</input><br>
             <input type="checkbox" name="contrato" value="nuevo"> Otros</input> <br>
-            <input type="range"  name="barra" min="1" max="5" step="1" value=""><br>
-            Fecha de la encuesta <input type="date" name="fecha" value=""> </input><br>
+            <label class="valoración">
+                 <input classname="js-valor" type="range"  name="barra" min="1" max="4" step="1" value="">
+                 1 - 4
+            </label><br>
+            <label for="fecha">
+            Fecha de la encuesta 
+                <input type="date" class="js-dia" name="fecha" value="2019-01-01" min="2018-01-01" max="2022-12-31"></input>
+            </label><br>
+
         </fieldset>  
-        <button class="js-submit" type="submit" class="send">Enviar datos</button> 
-        <button class="js-borrar" type="reset" class="clean">Borrar datos</button> <br>
-        <button class="js-valor" onclick="alert(barra.value)">Mostrar Valoración</button>
-        <button class="js-cuenta" onclick="alert(cuenta.value)" >Mostrar Cuenta</button>
-        <button class="js-dia" onclick="alert(fecha.value)">Mostrar día de la semana</button>
+        <button class="bt-submit" type="submit" class="send">Enviar datos</button> 
+        <button class="bt-borrar" type="reset" class="clean">Borrar datos</button> <br>
+        <button class="bt-valor" onclick="verValor();">Mostrar Valoración</button>
+        <button class="bt-cuenta" onclick="verCuenta();" >Mostrar Cuenta</button>
+        <button class="bt-dia" onclick="verDia();">Mostrar día de la semana</button>
     
     </form>
-    <script type="text/javascript" src="/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
 
