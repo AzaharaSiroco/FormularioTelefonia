@@ -1,38 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azahara García - Samsung DesArrolladoras Lab</title>
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <link rel="stylesheet" type="text/css" href="./css/normalize.css"
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
 
-</head>
+    <title>Azahara Garcia - Samsung DesArrolladoras Lab</title>
+  </head>
+
 <body>
-    <h1 class="hola"> Formulario Información Alta Telefónica</h1>
+<header>
+    <h1> Formulario Información</h1>
+    <h2>Alta Telefónica</h2>
+</header>
+<main>
         <form>
         <fieldset class="personalInfo"> 
             <legend class="legend1">Datos personales</legend> 
-            Nombre:<input class="ph_pInfo" type="text" name="nombre"
-            maxlength="30"> </br>
-            Apellidos:<input class="ph_pInfo" type="text" name="apellidos"
-            maxlength="60" /></br>
-            Dirección:<input class="ph_pInfo" type="text" name="direccion"
-            maxlength="60" /></br>
-            Código Postal: <input class="ph_pInfo" type="text" name="cp"
-            maxlength="5" /></br>
-            Localidad:<input class="ph_pInfo" type="text" name="localidad"
-            maxlength="30" /></br>
-            Provincia:<input class="ph_pInfo" type="text" name="provincia"
-            maxlength="30" /></br>
+           <label>Nombre:</label> 
+            <input 
+                type="text"
+                id="nombre" 
+                name="nombre"
+                maxlength="30"
+                placeholder="Aquí va tu nombre"
+                class="ph_pInfo"
+                /> </br>
+            <label>Apellidos:</label>
+            <input  
+                type="text" 
+                id="nombre"
+                name="apellidos"
+                maxlength="60" 
+                placeholder="Aqui van tus apellidos"
+                class="ph_pInfo"
+            /></br>
+            <label>Dirección:</label>
+                <input 
+                    type="text" 
+                    id="direccion"
+                    name="direccion"
+                    maxlength="60"
+                    placeholder="¿Dónde vives?"
+                    class="ph_pInfo"
+                /></br>
+            <label>Código Postal:</label> 
+            <input 
+                 
+                    type="number"
+                    id="cp"
+                    name="cp"
+                    maxlength="5"
+                    pattern="[0-9]{5}"
+                    placeholder="00000"
+                    class="ph_pInfo"
+            /></br>
+            <label>Localidad:</label>
+                <input 
+                    type="text" 
+                    id="localidad"
+                    name="localidad"
+                    maxlength="30"
+                    placeholder=""
+                    class="ph_pInfo"
+                /></br>
+            <label>Provincia:</label>
+                <input
+                    type="text" 
+                    id="provincia"
+                    name="provincia"
+                    maxlength="30" 
+                    class="ph_pInfo" 
+                /></br>
         </fieldset>
 
         <fieldset class="contract"> 
             <legend class="legend2">Tipo de contratación</legend>
-            <input type="radio" name="contrato" value="nuevo" checked="checked"> Nueva contratación </input>
-            <input type="radio" name="contrato" value="nuevo"> Portabilidad </input>
-            <input type="radio" name="contrato" value="nuevo"> Cambio de contrato </input> 
+            <label>
+                <input 
+                    type="radio" 
+                    id="contrato_nuevo"
+                    name="contrato" 
+                    value="nuevo" 
+                    checked="checked" > Nueva contratación </input>
+            </label>
+            <label>
+                <input 
+                    type="radio" 
+                    id="contrato_portabilidad"
+                    name="portabilidad" 
+                    value="nuevo"> Portabilidad </input>
+            </label>
+            <label>
+                <input 
+                    type="radio" 
+                    id="contrato_cambio"
+                    name="cambio_contrato" 
+                    value="nuevo"> Cambio de contrato </input>
+            </label> 
+            
             <p>Elija la compañía actual:</p>
             <select name="origen">
                 <option value="movistar">Movistar</option>
@@ -53,32 +125,105 @@
 
         <fieldset class="payInfo"> 
             <legend class="legend3">Datos bancarios</legend>
-            País:<input class="ph_dbanco" type="text" name="pais" value="ES"
+            <label>País:</label>
+            <input class="ph_dbanco" 
+            type="text" 
+            id="pais"
+            name="pais" 
+            value="ES"
             readonly="readonly"/> </br>
-            Control IBAN:<input class="ph_dbanco"  type="text" name="controlIBAN" placeholder="XX" pattern="[0-9]{2}" 
+
+            <label>Control IBAN:</label>
+            <input class="ph_dbanco"  
+            type="text" 
+            id="controlIBAN"
+            name="controlIBAN" 
+            placeholder="XX" 
+            pattern="[0-9]{2}" 
             maxlength="2" /></br>
-            Entidad:<input class="ph_dbanco"  type="text" name="entidad" placeholder="XXXX" pattern="[0-9]{4}" 
+
+            <label>Entidad:</label>
+            <input class="ph_dbanco"  
+            type="text" 
+            id="entidad"
+            name="entidad" 
+            placeholder="XXXX" 
+            pattern="[0-9]{4}" 
             maxlength="4" /></br>
-            Sucursal: <input class="ph_dbanco"  type="text" name="sucursal" placeholder="XX" pattern="[0-9]{2}"maxlength="2"/></br>
-            DC:<input class="ph_dbanco"  type="text" name="dc" placeholder="XX" pattern="[0-9]{2}" 
+
+            <label>Sucursal:</label> 
+            <input class="ph_dbanco"  
+            type="text" 
+            id="sucursal"
+            name="sucursal" 
+            placeholder="XX" 
+            pattern="[0-9]{2}"
+            maxlength="2"/></br>
+
+            <label> DC:</label>
+            <input class="ph_dbanco"  
+            type="text" 
+            id="dc"
+            name="dc" 
+            placeholder="XX" 
+            pattern="[0-9]{2}" 
             maxlength="2" /></br>
-            Cuenta:<input class="ph_dbanco js-cuenta" value="" type="text" name="cuenta" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" 
+
+            Cuenta:<input class="ph_dbanco js-cuenta"
+            value=""
+            type="text"
+            id="cuenta"
+            name="cuenta"
+            placeholder="XXXXXXXXXX"
+            pattern="[0-9]{10}" 
             maxlength="10" /></br>
 
         </fieldset>
         <fieldset class="masInfo"> 
             <legend class="legend4">Datos estadíticos - ¿Cómo nos conoció?</legend>
-            <input type="checkbox" name="contrato" value="nuevo"> A través de la TV</input><br>
-            <input type="checkbox" name="contrato" value="nuevo"> A través de la radio</input><br>
-            <input type="checkbox" name="contrato" value="nuevo"> A través de la Internet</input><br>
-            <input type="checkbox" name="contrato" value="nuevo"> Otros</input> <br>
+            <input 
+            type="checkbox"
+            name="tv"
+            value="nuevo"> A través de la TV</input><br>
+
+            <input 
+            type="checkbox" 
+            name="radio" 
+            value="nuevo"> A través de la radio</input><br>
+
+            <input 
+            type="checkbox" 
+            name="internet" 
+            value="nuevo"> A través de la Internet</input><br>
+
+            <input
+            type="checkbox" 
+            name="contrato" 
+            value="nuevo"> Otros</input> <br>
+
             <label class="valoración">
-                 <input classname="js-valor" type="range"  name="barra" min="1" max="4" step="1" value="">
+                 <input 
+                 classname="js-valor" 
+                 type="range"  
+                 id="valoracion"
+                 name="valoracion" 
+                 min="1" 
+                 max="4" 
+                 step="1" 
+                 value="">
                  1 - 4
             </label><br>
+
             <label for="fecha">
             Fecha de la encuesta 
-                <input type="date" class="js-dia" name="fecha" value="2019-01-01" min="2018-01-01" max="2022-12-31"></input>
+                <input
+                 type="date"
+                 id="date"
+                 class="js-dia" 
+                 name="fecha" 
+                 value="2019-01-01" 
+                 min="2018-01-01" 
+                 max="2022-12-31"></input>
             </label><br>
 
         </fieldset>  
@@ -87,9 +232,15 @@
         <button class="bt-valor" onclick="verValor();">Mostrar Valoración</button>
         <button class="bt-cuenta" onclick="verCuenta();" >Mostrar Cuenta</button>
         <button class="bt-dia" onclick="verDia();">Mostrar día de la semana</button>
-    
+        <button class="bt-dia" onclick="validarCodigoPostal();">CP</button>
     </form>
-    <script src="./js/main.js"></script>
+</main>
+<footer>
+    &copy; Azahara Garcia
+    <br />
+    github.com/azaharasiroco
+  </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
