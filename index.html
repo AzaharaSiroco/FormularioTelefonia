@@ -16,13 +16,15 @@
 
 <body>
 <header>
-    <h1> Formulario Información</h1>
-    <h2>Alta Telefónica</h2>
+    <div class="titular">
+    <h1>Alta Telefónica</h1>
+    <h2>Formulario de Información</h2>
+</div>
 </header>
 <main>
         <form>
         <fieldset class="personalInfo"> 
-            <legend class="legend1">Datos personales</legend> 
+            <legend class="legend">Datos personales</legend> 
            <label>Nombre:</label> 
             <input 
                 type="text"
@@ -81,7 +83,7 @@
         </fieldset>
 
         <fieldset class="contract"> 
-            <legend class="legend2">Tipo de contratación</legend>
+            <legend class="legend">Tipo de contratación</legend>
             <label>
                 <input 
                     type="radio" 
@@ -124,7 +126,7 @@
 
 
         <fieldset class="payInfo"> 
-            <legend class="legend3">Datos bancarios</legend>
+            <legend class="legend">Datos bancarios</legend>
             <label>País:</label>
             <input class="ph_dbanco" 
             type="text" 
@@ -180,7 +182,7 @@
 
         </fieldset>
         <fieldset class="masInfo"> 
-            <legend class="legend4">Datos estadíticos - ¿Cómo nos conoció?</legend>
+            <legend class="legend">Datos estadíticos - ¿Cómo nos conoció?</legend>
             <input 
             type="checkbox"
             name="tv"
@@ -227,8 +229,8 @@
             </label><br>
 
         </fieldset>  
-        <button class="bt-submit" type="submit" class="send">Enviar datos</button> 
-        <button class="bt-borrar" type="reset" class="clean">Borrar datos</button> <br>
+        <button class="bt-submit" type="submit">Enviar datos</button> 
+        <button class="bt-borrar" type="reset">Borrar datos</button> <br>
         <button class="bt-valor" onclick="verValor();">Mostrar Valoración</button>
         <button class="bt-cuenta" onclick="verCuenta();" >Mostrar Cuenta</button>
         <button class="bt-dia" onclick="verDia();">Mostrar día de la semana</button>

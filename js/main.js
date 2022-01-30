@@ -34,9 +34,9 @@ function verValor() {
   console.log(parseInt(input))
   if(input.length == 5 && parseInt(input) >= 10000 && parseInt(input) <= 52999)
   {
-    alert("codigo valido");
+    alert("Código postal válido");
   }
   else{
-    alert("codigo invalido");
+    alert("Código postal inválido");
    }
 }

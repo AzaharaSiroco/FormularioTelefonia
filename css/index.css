@@ -1,39 +1,37 @@
-.personalInfo {
+body {
     background-color: #ccf8fc;
+
+}
+.personalInfo {
+    background-color: #fcf4cc;
 }
 
 .contract {
-    background-color: #ccf8fc;
+    background-color: #ccfcce;
 }
 
 .payInfo {
-    background-color: #ccf8fc;
+    background-color: #fccfcc;
 }
 
 .masInfo {
-    background-color: #ccf8fc;
+    background-color: #f4ccfc;
 }
 
-.legend1 {
-    background-color: #f8da42;
-}
-
-.legend2 {
-    background-color: #f8da42;
-}
-
-.legend3 {
-    background-color: #f8da42;
-}
-
-.legend4 {
+.legend {
     background-color: #f8da42;
 }
 
 .ph_pInfo {
-    background-color: #fcf4cc;
+    background-color: #ccf8fc;
 }
 
 .ph_dbanco {
-    background-color: #fcf4cc;
+    background-color: #ccf8fc;
+}
+
+.titular {
+    display: block;
+    text-align: center;
+    
 }
