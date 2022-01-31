@@ -22,7 +22,7 @@
 </div>
 </header>
 <main>
-        <form action="" method="" id="" name="" onsubmit="validar();">
+        <form action="" method="" id="" name="" onsubmit="event.preventDefault()">
         <fieldset class="personalInfo"> 
             <legend class="legend">Datos personales</legend> 
            <label>Nombre:</label> 
@@ -229,11 +229,12 @@
             </label><br>
 
         </fieldset>  
-        <button class="bt-submit" type="submit">Enviar datos</button> 
+        <button class="bt-submit" type="submit" onclick="validar()">Enviar datos</button> 
         <button class="bt-borrar" type="reset">Borrar datos</button> <br>
         <button class="bt-valor" onclick="verValor();">Mostrar Valoración</button>
         <button class="bt-cuenta" onclick="verCuenta();" >Mostrar Cuenta</button>
         <button class="bt-dia" onclick="verDia();">Mostrar día de la semana</button>
+       
     </form>
 </main>
 <footer>
