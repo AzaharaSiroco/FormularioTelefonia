@@ -24,10 +24,13 @@ function verValor() {
     alert(`La fecha seleccionada es ${fecha_dom}, ${fecha_formato}`);
   }
 
-
+  document.getElementById("provincia")
+  document.addEventListener("focusout", validar);
 
   function validar() {
-  var cp = document.getElementById("cp").value;
+  var cpost = document.getElementById("cp").value;
+  var ciudad =document.getElementById("provincia").value;
+
   var provinciasCp = [
     "Álava", "Albacete", "Alicante", "Almería", "Ávila",
     "Badajoz", "Baleares", "Barcelona","Burgos", "Cáceres",
@@ -40,10 +43,30 @@ function verValor() {
     "Sevilla", "Soria", "Tarragona", "Teruel", "Toledo",
     "Valencia", "Valladolid", "Vizcaya", "Zamora", "Zaragoza",
     "Ceuta", "Melilla"]
-    console.log (provinciasCp[0])
-  if (cp.length == 5 && parseInt(cp) >= 10000 && parseInt(cp) <= 52999) {
-    for (const index in provinciasCp) {
-      console.log(`${index}: ${provinciasCp[index]}`);
-    }
-}
+    var codigo = [
+      "01", "02", "03", "04", "05", "06", "07","08",
+      "09", "10","11","12","13","14","15","16",
+      "17","18","19","20","21","22","23","24","25",
+      "26","27","28","29","30", "31","32","33","34",
+      "35","36","37","38","39","40","41","42","43",
+      "44","45","46","47","48","49","50","51","52",
+    ];
+
+    if (
+     cpost.substring(0,2)
+     == codigo [0] && 
+     ciudad == provinciasCp [0]
+   ) {
+     correcto = document.createElement ("p");
+     correcto.textContent = cpost  + "pertenece a" + ciudad;
+     correcto.setAtribute ("id","correcto")
+     document.getElementById("val").appendChild(correcto);
+     document.getElementById("correcto").style.color = "#00e600";
+  } else {
+		 incorrecto = document.createElement("p");
+     incorrecto.textContent = cpost + " no pertenece a " + ciudad;
+     incorrecto.setAttribute("id", "incorrecto");
+     document.getElementById("val").appendChild(incorrecto);
+     document.getElementById("incorrecto").style.color = "#008h89";
+  }
   }
